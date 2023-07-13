@@ -1,0 +1,106 @@
+.footer{
+    @include rem-fallback(padding,50,0);
+    .upper-footer{
+        a{
+            @include rem-fallback(max-width,220);
+            width:100%;
+            margin:0 auto 70px;
+            display:inline-block;
+            img{
+                width:100%;
+                display:block;
+            }
+        }
+    }
+    .lawer-footer{
+        display:flex;
+        flex-wrap:wrap;
+        align-items:center;
+        justify-content:space-between;
+        .footer-links{
+            display:flex;
+            align-items: center;
+            margin:0 -10px;
+            li{
+                @include rem-fallback(padding,0,10);
+                a{
+                    display:inline-block;
+                   
+                    color:$gray;
+                    @include rem-fallback(font-size,15);
+                    line-height:1.2;
+                    font-weight:600;
+                    text-decoration:none;
+                    &:hover{
+                        color:$white;
+                    }
+                }
+            }
+        }
+        .social-link-block{
+            ul{
+            display: flex;
+            align-items: center;
+            margin:0 -10px;
+            li{
+                @include rem-fallback(padding,0,10);
+                a{
+                    width: 32px;
+                    transition:0.3s all;
+                    display:inline-block;
+                    i{
+                        display: inline-block;
+                    }
+                    img{
+                        width:100%;
+                        &.hover{
+                            display:none;
+                        }
+                        &.normal{
+                            display:block
+                        }
+                    }
+                    &:hover{
+                        img{
+                            &.normal{
+                                display:none;
+                            }
+                            &.hover{
+                                display:block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        }
+        .footer-right{
+            display:flex;
+            align-items: center;
+            margin:0 -10px;
+            p{
+                margin-bottom:0;
+                display:inline-block;
+                @include rem-fallback(font-size,15);
+                line-height:1.2;
+                color:$gray;
+                @include rem-fallback(padding,0,10);
+                span{
+                    display:inline-block;
+                    @include rem-fallback(font-size,15);
+                    line-height:1.2;
+                    color:$gray;
+                    font-weight:300;
+                    @include rem-fallback(margin-right,10);
+                }
+            }
+            .copy-right{
+                font-weight:500;
+            }
+            .deliver{
+                font-weight:300;
+                padding-left:0;
+            }
+        }
+    }
+}

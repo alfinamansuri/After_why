@@ -1,0 +1,230 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased; 
+  -moz-font-smoothing: antialiased; 
+  -o-font-smoothing: antialiased;
+}
+body{
+  margin: 0; font-family: $primary-font; color:$white;@include rem-fallback(font-size,18) ;
+  height:100%;
+  font-weight:400;
+  background-color:$black;
+  -webkit-font-smoothing: antialiased; 
+  -moz-font-smoothing: antialiased; 
+  -o-font-smoothing: antialiased;
+  &::-moz-selection{
+      background-color:$white;
+      color:$black;
+  }
+  &::selection{
+      background-color:$white;
+      color:$black;
+  }
+}
+
+ul{
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+}
+
+
+a , button{
+  cursor:pointer;
+  @include transition(all 0.3s);
+}
+a{
+  &:hover{
+      text-decoration: none;
+  }
+  &:focus{
+      outline:none;
+  }
+}
+
+button{
+  &:hover , &:focus{
+      outline: none;
+  }
+}
+
+input{
+  &:focus{
+      outline:none;
+  }
+}
+
+.wrapper{
+  min-height: 100%;
+  @include rem-fallback(padding-top,92);
+  @include transition(transform 0.3s);
+  @include bp(sm-max){
+      @include rem-fallback(padding-top,85);
+  }
+
+}
+
+.container{
+    
+    @include rem-fallback(max-width,1440);
+    @include rem-fallback(padding,0,30);
+    margin:0 auto;
+    width:100%;
+}
+.inner-container{
+    max-width:1152px;
+    width:100%;
+    margin:0 auto;
+
+}
+
+
+.pull-right{
+  float: right!important;
+}
+
+.hidden-md{
+  @include bp(md-max){
+      display:none !important;
+  }
+}
+
+.visible-md{
+  display:none;
+  @include bp(md-max){
+      display:block !important;
+  }
+}
+
+.primary-btn{
+	@include rem-fallback(font-size,18);
+	line-height:1.2;
+	@include rem-fallback(padding,10,30);
+	@include rem-fallback(height,51);
+    @include transition(all 0.3s);
+   
+	border:1px solid transparent;
+	font-weight: 400;
+	display:inline-flex;
+	align-items: center;
+	justify-content:center;
+	text-align: center;
+	border-radius:8px;
+	position: relative;
+	z-index: 1;
+    transition: 0.3s all;
+    min-width:207;
+    cursor: pointer;
+}
+.black-bg{
+    background-color:$black;
+    color:$white;
+    &:hover{
+        // border-color:$black;
+        // color: $black;
+        // background-color:transparent
+        opacity:0.8;
+	}
+}
+.white-border{
+    border-color:$white;
+    color:$white;
+    background-color:transparent;
+    &:hover{
+        border-color:transparent;
+        background-color:$white;
+        color: $black;
+	}
+}
+.white-bg{
+    background-color:$white;
+    color:$black;
+    &:hover{
+        border-color:$white;
+        color:$white;
+    }
+}
+
+
+.form-group-wrap{
+    @include rem-fallback(margin-bottom,20);
+    .cancel-text{
+        @include rem-fallback(font-size,22);
+        font-weight:400;
+        color:$black;
+        @include rem-fallback(margin-bottom,10);
+    }
+    &.button-block{
+        @include rem-fallback(margin-top,40);
+    }
+}
+
+.form-group{
+    .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+        border-color:$form-border;
+        border-radius:15px;
+        min-height:62px;
+    }
+    .form-control{
+        width:100%;
+        input{
+        min-height:62px;
+        padding-top:0;
+        padding-bottom:0;
+        @include rem-fallback(font-size,20);
+	    line-height:1.2;
+	    @include rem-fallback(padding,0,15);
+        color:$black;
+        font-weight:500;
+        font-family:$secondary-font;
+        }
+        &:focus-visible{
+            outline:0;
+        }
+        .MuiInputBase-root{
+            &.Mui-focused{
+                fieldset{
+                border:1px solid $form-border;
+                }
+            }
+        }
+    }
+    label{
+        @include rem-fallback(font-size,20);
+	    line-height:1.2;
+        color:$form-border;
+        font-weight:500; 
+        font-family:$secondary-font;
+        &.Mui-focused{
+            color:$form-border;
+        }
+    }
+    fieldset{
+        span{
+            @include rem-fallback(font-size,20);
+            line-height:1.2;
+            color:$form-border;
+            font-weight:500; 
+            font-family:$secondary-font;
+        }
+    }
+    .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+        &:hover{
+            .MuiOutlinedInput-notchedOutline{
+                border-color:$form-border;
+            }
+        }
+        
+    }
+}

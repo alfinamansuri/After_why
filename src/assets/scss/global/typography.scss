@@ -1,0 +1,64 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin: 0;
+	@include rem-fallback(margin,0,0,16);
+}
+h1 {
+	@include rem-fallback(font-size,35);
+	line-height:1.2;
+	@include rem-fallback(margin,0,0,22);
+}
+
+h2{
+	@include rem-fallback(font-size,35);
+	line-height:1.2;
+	@include rem-fallback(margin,0,0,22);
+	
+}
+
+h3{
+	@include rem-fallback(font-size,30);
+	line-height:1.2;
+	@include rem-fallback(margin,0,0,30);
+
+}
+h4{
+	@include rem-fallback(font-size,24);
+	line-height:1.2;
+	@include rem-fallback(margin,0,0,30);
+
+}
+h5{
+	@include rem-fallback(font-size,16);
+	line-height:1.2;
+	@include rem-fallback(margin,0,0,30);
+
+}
+
+p {
+	@include rem-fallback(font-size,20);
+	line-height:1.2;
+	@include rem-fallback(margin,0,0,16);
+	
+	font-weight: 300;
+}
+
+i,em{
+	font-style: normal;
+}
+
+a{
+	@include transition(0.3s);
+}
+
+
+
+
+
+.dk-select-options{
+	z-index: 2;
+}

@@ -1,0 +1,99 @@
+.auth-detail{
+    min-height:calc(100vh - 523px);
+    background-image: url('../../images/auth_bg.png');
+    background-position:center;
+    @include rem-fallback(padding,50,0,100);
+    .auth-inner{
+        display:flex;
+    }
+
+}
+
+/* auth left block */ 
+
+.auth-left{
+    @include rem-fallback(padding,50);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: center;
+    background-color: $black_1;
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+    height:100%;
+    .auth-logo{
+        @include rem-fallback(margin-bottom,20);
+        a{
+            display:inline-block;
+            max-width:274px;
+            width:100%;
+            margin:0 auto;
+            img{
+                width:100%;
+                display:block;
+            }
+        }
+    }
+    .auth-col-logo{
+        @include rem-fallback(margin-bottom,20);
+        i{
+            max-width:379px;
+            width:100%;
+            display:inline-block;
+        }
+    }
+    .canvas-text{
+        display:inline-block;
+        color:$white;
+        @include rem-fallback(font-size,35);
+        line-height:1.2;
+        max-width:247px;
+        width:100%;
+        margin:0 auto;
+    }
+}
+
+
+/*end*/
+
+/*auth right block */ 
+
+.auth-right{
+    @include rem-fallback(padding,50,50,100);
+    position: relative;
+    h2{
+        color:$black;
+        max-width:391px;
+        width:100%;
+        margin:0 auto 35px;
+    }
+    background-color:$white;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+    .account-link{
+        @include rem-fallback(font-size,20);
+        font-weight:500;
+        color:$light-gray;
+        font-family:$secondary-font;
+        margin-bottom:0;
+        position: absolute;
+        bottom:30px;
+        left:50%;
+        transform:translate(-50%);
+        width:100%;
+        @include rem-fallback(padding,0,10);
+        a{
+            color:$black;
+            font-weight:700;
+            &:hover{
+                color:$light-gray;
+            }
+        }
+    }
+}
+
+
+
+
+
+/*end*/

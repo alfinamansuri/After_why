@@ -1,0 +1,15 @@
+.header{
+    @include rem-fallback(padding,30,0);
+        .inner-container{
+            text-align:left;
+        a{
+            display:inline-block;
+            max-width:274px;
+            width:100%;
+            img{
+                width:100%;
+            }
+        }
+    }
+}
+
