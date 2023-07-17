@@ -6,11 +6,10 @@ import TextField from '@mui/material/TextField';
 import { Link } from 'react-router-dom';
 
 
-
-function createaccount() {
+function login() {
   return (
     <div>
-        <div className="auth-page">
+                     <div className="auth-page login_page">
         <Siteheader></Siteheader>
         <div className="auth-detail">
         <h1></h1>
@@ -21,29 +20,29 @@ function createaccount() {
             </div>
             <div className="auth-right-block">
                 <div className="auth-right">
-                    <h2>Create Account To Get Started </h2>
+                <div className="auth-title">
+                    <h2>Log in</h2>
+                    <h4>Sign In to continue</h4>
+                    </div>
                     <form>
                         <div className="form-group-wrap">
                             <div className="form-group">
-                                <TextField id="name" label="Name *" className="form-control"  />
+                                <TextField id="Email" label="Email*" className="form-control"  />
                             </div>
                         </div>
+                      
                         <div className="form-group-wrap">
                             <div className="form-group">
-                                <TextField id="email" label="Email *"  className="form-control"/>
-                            </div>
-                        </div>
-                        <div className="form-group-wrap">
-                            <div className="form-group">
-                                <TextField id="password" label="Password *" className="form-control" />
+                                <TextField id="password" label="Password*" className="form-control" />
                             </div>
                         </div>
                         <div className="form-group-wrap button-block">
-                       
-                        <button  className="primary-btn black-bg" title="Sign Up">Sign Up</button>
+
+                        <button  className="primary-btn black-bg" title="Pay $54.99 per month">Sign in</button>
+                       <p><Link to="/" title="Forget you Password?">Forget you Password?</Link></p> 
                         </div>
                     </form>
-                    <p className="account-link">Already have an account? <Link to="" title="Sign In"> Sign In</Link></p>
+                    <p className="account-link ">Do you have an Account? <Link to="" title="Terms Privacy"> Sign Up</Link></p>
                 </div>
             </div>
         </div>
@@ -51,10 +50,8 @@ function createaccount() {
         </div>
         <Sitefooter></Sitefooter>
         </div>
-
-
     </div>
   )
 }
 
-export default createaccount
+export default login

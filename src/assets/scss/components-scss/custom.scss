@@ -1,3 +1,5 @@
+
+
 .auth-detail{
     min-height:calc(100vh - 523px);
     background-image: url('../../images/auth_bg.png');
@@ -10,6 +12,9 @@
 }
 
 /* auth left block */ 
+.auth-left-block{
+    width:50%;
+}
 
 .auth-left{
     @include rem-fallback(padding,50);
@@ -57,10 +62,14 @@
 /*end*/
 
 /*auth right block */ 
+.auth-right-block{
+    width:50%;
+}
 
 .auth-right{
     @include rem-fallback(padding,50,50,100);
     position: relative;
+    
     h2{
         color:$black;
         max-width:391px;
@@ -82,12 +91,65 @@
         transform:translate(-50%);
         width:100%;
         @include rem-fallback(padding,0,10);
+        span{
+            display:inline-block;
+            padding:0 5px;
+        }
         a{
             color:$black;
             font-weight:700;
             &:hover{
                 color:$light-gray;
             }
+            
+            &.privacy-link{
+                color:$light_gray;
+                text-decoration: none;
+                font-weight:500;
+                &:hover{
+                    color:$black;
+                }
+            }
+        }
+    }
+}
+.auth-title{
+    @include rem-fallback(margin-bottom,40);
+    h2{
+        @include rem-fallback(margin-bottom,5);
+    }
+    h4{
+    font-weight:400;
+    color:$black;
+    margin-bottom:0;
+    }
+}
+/*end*/
+
+/* pay-card-page */ 
+.pay_card_page{
+    .button-block{
+        button{
+        display:block;
+        width:100%;
+        }
+    }
+}
+.login_page{
+    .button-block{
+        p{
+        @include rem-fallback(margin-top,10);
+        display:block;
+        width:100%;
+        a{
+            text-decoration:none;
+            @include rem-fallback(font-size,16);
+            color:$black;
+            font-weight:400;
+            &:hover{
+                color:$light-gray;
+            }
+        }
         }
     }
 }

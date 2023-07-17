@@ -27,7 +27,7 @@ h3{
 
 }
 h4{
-	@include rem-fallback(font-size,24);
+	@include rem-fallback(font-size,22);
 	line-height:1.2;
 	@include rem-fallback(margin,0,0,30);
 

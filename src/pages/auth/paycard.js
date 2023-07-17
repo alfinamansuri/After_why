@@ -6,11 +6,10 @@ import TextField from '@mui/material/TextField';
 import { Link } from 'react-router-dom';
 
 
-
-function createaccount() {
+function paycard() {
   return (
     <div>
-        <div className="auth-page">
+               <div className="auth-page pay_card_page">
         <Siteheader></Siteheader>
         <div className="auth-detail">
         <h1></h1>
@@ -21,29 +20,37 @@ function createaccount() {
             </div>
             <div className="auth-right-block">
                 <div className="auth-right">
-                    <h2>Create Account To Get Started </h2>
+                    <h2>Pay Card</h2>
                     <form>
                         <div className="form-group-wrap">
                             <div className="form-group">
-                                <TextField id="name" label="Name *" className="form-control"  />
+                                <TextField id="Email" label="Email*" className="form-control"  />
                             </div>
                         </div>
                         <div className="form-group-wrap">
                             <div className="form-group">
-                                <TextField id="email" label="Email *"  className="form-control"/>
+                                <TextField id="info" label="Card Information*"  className="form-control"/>
+                            </div>
+                        </div>
+                        <div className="form-group-wrap two-col">
+                            <div className="form-group">
+                                <TextField id="password" label="Name of the Card*" className="form-control" />
+                            </div>
+                            <div className="form-group">
+                                <TextField id="password" label="Name of the Card*" className="form-control" />
                             </div>
                         </div>
                         <div className="form-group-wrap">
                             <div className="form-group">
-                                <TextField id="password" label="Password *" className="form-control" />
+                                <TextField id="password" label="Name of the Card*" className="form-control" />
                             </div>
                         </div>
                         <div className="form-group-wrap button-block">
-                       
-                        <button  className="primary-btn black-bg" title="Sign Up">Sign Up</button>
+
+                        <button  className="primary-btn black-bg" title="Pay $54.99 per month">Pay $54.99 per month</button>
                         </div>
                     </form>
-                    <p className="account-link">Already have an account? <Link to="" title="Sign In"> Sign In</Link></p>
+                    <p className="account-link ">Powered by <b>Stripe</b> <span>|</span><Link to="" title="Terms Privacy" className="privacy-link"> Terms Privacy</Link></p>
                 </div>
             </div>
         </div>
@@ -51,10 +58,8 @@ function createaccount() {
         </div>
         <Sitefooter></Sitefooter>
         </div>
-
-
     </div>
   )
 }
 
-export default createaccount
+export default paycard

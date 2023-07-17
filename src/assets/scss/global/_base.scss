@@ -159,6 +159,13 @@ input{
 
 .form-group-wrap{
     @include rem-fallback(margin-bottom,20);
+    &.two-col{
+        margin:0 -10px 20px;
+        display:flex;
+        .form-group{
+            @include rem-fallback(padding,0,10);
+        }
+    }
     .cancel-text{
         @include rem-fallback(font-size,22);
         font-weight:400;
